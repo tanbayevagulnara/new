@@ -1,0 +1,21 @@
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+<div class="container py-5">
+    <h1> Register </h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ register_form|crispy }}
+
+        <button class="btn btn-primary" type="sumbit" > 
+            Register 
+        </button>
+    </form>
+
+    <p class="text-center"> already have an account? go here <a href="/login"> login </a> </p>
+
+</div>
+
+{% endblock %}
